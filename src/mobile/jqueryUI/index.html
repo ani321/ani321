@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <title>B&uacute;squeda de artistas</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+    <script src="js/funciones.js"></script>
+  </head> 
+  <body> 
+    <div data-role="page">
+      <div data-role="header">
+        <h1>B&uacute;squeda</h1>
+      </div><!-- /header -->
+      <div data-role="content"> 
+        <label for="nombre" class="ui-hidden-accessible">Nombre del artista</label>
+        <input type="text" name="nombre" id="termino-busqueda" value="" placeholder="Nombre del artista"/>
+        <a href="#" data-role="button" data-icon="star" onclick="buscar();">Buscar</a>
+        <ul id="listado" data-role="listview" data-inset="true" data-filter="false">
+        </ul>
+      </div><!-- /content -->
+    </div><!-- /page -->
+    <div data-role="page" id="pagina-artista">
+      <div data-role="header">
+        <a href="index.html" data-role="button" data-icon="home">B&uacute;squeda</a>
+        <h1 id="nombre-artista"></h1>
+      </div>
+      <div data-role="navbar">
+        <ul>
+          <li><a id="link-noticias" href="#">Noticias</a></li>
+        </ul>
+      </div>
+      <div id="contenido-artista" data-role="content"></div>
+    </div>
+  </body>
+</html>
